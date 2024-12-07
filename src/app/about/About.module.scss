@@ -1,0 +1,19 @@
+@use "../..//styles/mixins.scss" as *;
+
+.about {
+  @include spacing(40px, 20px);
+  background-color: #fdf6e3;
+  border: 1px solid #eee;
+  @include rounded(10px);
+
+  h1 {
+    @include text-style(2rem, bold, #333);
+    text-align: center;
+  }
+
+  p {
+    @include text-style(1.2rem, normal, #666);
+    line-height: 1.5;
+    text-align: center;
+  }
+}

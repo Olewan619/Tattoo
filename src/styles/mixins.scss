@@ -1,0 +1,60 @@
+//  Центрирование элементов
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+//  Кнопки
+@mixin button-styles(
+  $bg-color,
+  $text-color,
+  $hover-color: darken($bg-color, 10%)
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// === Отступы ===
+@mixin spacing($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
+// === Тени ===
+@mixin box-shadow($x: 0, $y: 4px, $blur: 6px, $color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Круглые рамки
+@mixin rounded($radius: 8px) {
+  border-radius: $radius;
+}
+
+// Текстовые стили
+@mixin text-style($size, $weight: normal, $color: #000) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// Скрытие элемента
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
